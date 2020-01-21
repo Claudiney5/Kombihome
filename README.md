@@ -1,12 +1,12 @@
 # Kombihome
 Automação de kombihome DIY
 
-Programação de Arduino para monitoramento de varios parâmetros de uma motorhome montado sobre o chassis de uma VW Kombi Standart ano 2000.
+Programação de Arduino para monitoramento de varios parâmetros de uma motorhome montado sobre o chassis de uma VW Kombi Standart ano 2000. [Arduino Mega 2560 R3]
 
 Parâmetros exigidos:
-- temperatura do motor (A)[DS18B20]
-- temperatura externa (A) [DS18B20]
-- temperatura interna (A) [DS18B20]
+- temperatura do motor (D*)[DS18B20]
+- temperatura externa (D*) [DS18B20]
+- temperatura interna (D*) [DS18B20]
 - nível de água limpa (D)
 - nível de água servida (D)
 - sensor de GLP (D)
@@ -17,6 +17,11 @@ Parâmetros exigidos:
 - sensor de tensão na bateria (A)
 
 ENTRADAS:
-- 4 analógicas
+- 3 analógicas
 - 10 digitais
+- botão de seleção de monitoramento
+
+SAÍDAS:
+- LCD
+- alarme sonoro
 
