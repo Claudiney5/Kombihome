@@ -1,23 +1,17 @@
-
-  // sensor de temperatura cabine:  DS18B20  [ ]
-  // sensor de temperatura interna: DS18B20  [ ] 
-  // sensor temperatura externa:    DS18B20  [ ]
-  // sensor de temperatura do motor: DS18B20 [x]
-  
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-// vamos conectar os dados de temperatura no pino 2 do Arduino
+// conectar os dados de temperatura no pino 2 do Arduino
 #define ONE_WIRE_BUS 2
 
-// definimos a resolução em 0,5°C(9) para trabalharmos 
+// resolução em 0,5°C(9) 
 #define TEMPERATURE_PRECISION 9 //0.5°[9], 0.25°C[10], 0.125°C[11], and 0.0625°C[12].
 #define DEVICE_DISCONNECTED_C -120
 
 // instanciando oneWire para que qualquer dispositivo de fio único (onewired) se comunique com o Arduino
 OneWire oneWire(ONE_WIRE_BUS);
 
-// passando nosso objeto oneWire como referênca para o DallasTemperature
+// passando objeto oneWire como referênca para o DallasTemperature
 DallasTemperature sensores(&oneWire);
 
 // vetor que terá o endereço dos sensores
@@ -88,22 +82,6 @@ void setup() {
   if (!sensores.getAddress(termExt, 2)) Serial.println("Endereço do term. externo não encontrado!");
   if (!sensores.getAddress(termMotor, 3)) Serial.println("Endereço do term. do motor não encontrado!");
   Serial.println();
-
-  /*Serial.print("Endereço termCab: ");
-  printAddress(termCab);
-  Serial.println();
-
-  Serial.print("Endereço termHab: ");
-  printAddress(termHab);
-  Serial.println();
-  
-  Serial.print("Endereço termExt: ");
-  printAddress(termExt);
-  Serial.println();
-
-  Serial.print("Endereço termCab: ");
-  printAddress(termMotor);
-  Serial.println();*/
 
   sensores.setResolution(termCab, TEMPERATURE_PRECISION);
   sensores.setResolution(termHab, TEMPERATURE_PRECISION);
