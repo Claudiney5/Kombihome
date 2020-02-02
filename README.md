@@ -7,7 +7,7 @@ Parâmetros exigidos:
 - temperatura do motor (D*)[DS18B20]
 - temperatura externa (D*) [DS18B20]
 - temperatura cabine (D*) [DS18B20]
-- temperatura habitáulo (D*) [DS18B20]
+- temperatura habitáculo (D*) [DS18B20]
 - nível de água limpa (D)
 - nível de água servida (D)
 - sensor de GLP (D)
